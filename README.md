@@ -4,7 +4,7 @@
 
 Annote PDF2PDF
 
-An application to move annotations from one pdf to another pdf
+An application to move annotations from one pdf to another!
 
 
 ## Installation and Setup Instructions
@@ -23,3 +23,4 @@ Installation:
 * https://github.com/pymupdf/PyMuPDF/issues/318
 * https://pymupdf.readthedocs.io/en/latest/page.html#Page.addHighlightAnnot
 * https://github.com/pymupdf/PyMuPDF-Utilities/blob/master/annotations/new-annots.py
+
