@@ -19,5 +19,7 @@ Installation:
 
 ### References
 
-https://github.com/pymupdf/PyMuPDF-Utilities/tree/master/textbox-extraction
-https://github.com/pymupdf/PyMuPDF/issues/318
+* https://github.com/pymupdf/PyMuPDF-Utilities/tree/master/textbox-extraction
+* https://github.com/pymupdf/PyMuPDF/issues/318
+* https://pymupdf.readthedocs.io/en/latest/page.html#Page.addHighlightAnnot
+* https://github.com/pymupdf/PyMuPDF-Utilities/blob/master/annotations/new-annots.py

@@ -1,5 +1,4 @@
 import fitz
-
 def make_text(words):
     """Return textstring output of getText("words").
     Word items are sorted for reading sequence left to right,
@@ -20,6 +19,7 @@ def make_text(words):
 def main():
     doc = fitz.open("input.pdf")  # any supported document type
     page = doc[0]
+
     words = page.getText("words")  # list of words on page
     # print(words)
     annot = page.firstAnnot
