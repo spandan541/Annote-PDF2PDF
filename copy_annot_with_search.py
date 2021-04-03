@@ -19,7 +19,7 @@ def make_text(words):
     return "\n".join([" ".join(line[1]) for line in lines])
 
 def main():
-    if(len(sys.argv)<2):
+    if(len(sys.argv)<3):
         print("please enter source pdf path and destination pdf path as command line arguments")
         exit(-1)
     src = fitz.open(sys.argv[1])
@@ -38,7 +38,7 @@ def main():
                     rect = fitz.Quad(annot.vertices[i:j]).rect
                     mywords = [w for w in words if fitz.Rect(w[:4]).intersect(rect)]
                     search = make_text(mywords)
-                    print(search)
+                    # print(search)
                     quads = pagedes.search_for(search, quads=True)
                     pagedes.addHighlightAnnot(quads)
                     i=i+4

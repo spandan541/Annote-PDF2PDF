@@ -2,7 +2,7 @@ import fitz
 import sys
 
 def main():
-    if(len(sys.argv)<2):
+    if(len(sys.argv)<3):
         print("please enter source pdf path and destination pdf path as command line arguments")
         exit(-1)
     src = fitz.open(sys.argv[1])
