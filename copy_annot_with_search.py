@@ -18,9 +18,12 @@ def make_text(words):
     return "\n".join([" ".join(line[1]) for line in lines])
 
 def main():
-    src = fitz.open("KuroseCh1-2.pdf")
-    dest = fitz.open("James-Kurose-Keith-Ross-Computer-Networking_-A-Top-Down-Approach-7th-Edition.pdf")
-    for i in range(176,177):#pages start from 0
+    srcpath=input("please enter source pdf path")
+    destpath=input("please enter destination pdf path")
+    src = fitz.open(srcpath)
+    dest = fitz.open(destpath)
+    start,end = input("enter start & ending page numbers both inclusive:").split()
+    for i in range(start-1,end+1):#pages start from 0
         pagesrc = src[i]
         pagedes = dest[i]
         words = pagesrc.getText("words")
@@ -40,6 +43,6 @@ def main():
                     j=j+4
             annot=annot.next
         #dest.saveIncr() #to save in original file
-        dest.save("output1.pdf") #to save in new file
+        dest.save("output.pdf") #to save in new file
 if __name__=="__main__":
     main()
