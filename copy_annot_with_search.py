@@ -1,4 +1,5 @@
 import fitz
+import sys
 
 def make_text(words):
     """Return textstring output of getText("words").
@@ -18,11 +19,12 @@ def make_text(words):
     return "\n".join([" ".join(line[1]) for line in lines])
 
 def main():
-    srcpath=input("please enter source pdf path")
-    destpath=input("please enter destination pdf path")
-    src = fitz.open(srcpath)
-    dest = fitz.open(destpath)
-    start,end = input("enter start & ending page numbers both inclusive:").split()
+    if(len(sys.argv)<2):
+        print("please enter source pdf path and destination pdf path as command line arguments")
+        exit(-1)
+    src = fitz.open(sys.argv[1])
+    dest = fitz.open(sys.argv[2])
+    start,end = map(int,input("enter start & ending page numbers (both inclusive):").split())
     for i in range(start-1,end+1):#pages start from 0
         pagesrc = src[i]
         pagedes = dest[i]

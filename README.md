@@ -19,7 +19,7 @@ Installation:
 
 Run
 
-`python3 copy_annot.py`
+`python3 copy_annot.py path_PDF_src path_PDF_dest`
 
 ### References
 
